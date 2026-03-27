@@ -1,73 +1,67 @@
-# React + TypeScript + Vite
+# HealthSync Dashboard - Healthcare SaaS UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+HealthSync is a premium B2B Healthcare SaaS platform designed for healthcare professionals to manage patients, analyze trends, and receive real-time alerts. This application demonstrates advanced frontend development skills using a modern React architecture.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **🛡️ Secure Authentication**: Managed sessions with Zustand and simulated Firebase Auth.
+- **📊 Advanced Analytics**: Interactive data visualization using Recharts for recovery trends and admissions.
+- **👥 Patient Management**: Dynamic Grid and List views with real-time search and status monitoring.
+- **🔔 Real-time Notifications**: Integrated Service Worker for critical medical push notifications.
+- **🎨 Premium Design System**: 100% Vanilla CSS with a focus on glassmorphism, responsiveness, and micro-animations.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 18+ (with Vite)
+- **Language**: TypeScript
+- **State Management**: Zustand
+- **Styling**: Vanilla CSS (Custom Variables-based Design System)
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Notifications**: Service Worker API
 
-## Expanding the ESLint configuration
+## 📋 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js (v16.0 or higher)
+- npm or yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aditya-K08/HealthCare-Saas.git
+   cd healthcare-saas-ui
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🔐 Credentials
+
+For demonstration purposes, use the following credentials to log in:
+- **Email**: `admin@healthcare.com`
+- **Password**: `password`
+
+## 📁 Directory Structure
+
+```text
+src/
+├── components/   # Reusable UI and Layout components
+├── features/     # Feature-specific logic
+├── hooks/        # Custom React hooks (e.g., useServiceWorker)
+├── layouts/      # Application page layouts
+├── lib/          # External service configurations (Firebase)
+├── pages/        # Top-level route components
+├── services/     # Mock data and API simulations
+├── store/        # Zustand state definitions
+└── styles/       # Global CSS variables and base styles
 ```
